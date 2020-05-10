@@ -1,0 +1,103 @@
+intents:
+  - saludar: {triggers: action_saludar}
+  - despedir
+  - bot_challenge: {triggers: action_bot}
+  - informar
+  - lavar
+  - planchar
+  - componer
+  - domicilio
+  - sucursal
+
+entities: 
+  - tipo_prenda
+  - tipo_lavado
+  - numero_prendas
+  - tipo_compostura
+  - domicilio
+  - sucursal
+  - fecha
+  - hora
+
+slots:
+  tipo_prenda:
+    type: categorical
+    values:
+      - camisa
+      - chamarra
+      - corbata
+      - jeans
+      - pantalón
+      - playera
+      - saco
+      - short
+      - suéter
+      - top
+      - traje
+      - vestido
+      - zapatos
+      - tenis
+  sucursal:
+    type: categorical
+    values: 
+      - asturias
+      - azcapotzalco
+      - del_valle
+      - zacatenco
+  numero_prendas:
+    type: unfeaturized
+  tipo_compostura:
+    type: categorical
+    values: 
+      - ampliar
+      - reducir
+      - reparar
+  domicilio:
+    type: unfeaturized
+  fecha:
+    type: unfeaturized
+  tipo_lavado:
+    type: categorical
+    values:
+      - seco
+      - normal
+      
+actions:
+  - action_saludar
+  - action_bot
+
+forms:
+  - lavar_form
+  - planchar_form
+  - componer_form
+  - domicilio_form
+  - sucursal_form
+
+responses:
+  utter_saludar:
+  - text: "Bienvenido!"
+  utter_despedir:
+  - text: "Hasta pronto"
+  utter_soyunbot:
+  - text: "Soy un chatbot, construido usando Rasa"
+  utter_ask_tipo_prenda:
+  - text: "¿Qué tipo de prenda?"
+  utter_ask_numero_prendas:
+  - text: "¿Cuántas prendas de este tipo?"
+  utter_ask_tipo_lavado:
+  - text: "¿Lavado en seco o normal?"
+  utter_ask_tipo_compostura:
+  - text: "¿Qué tipo de compostura necesitas para tu prenda?"
+  utter_ask_sucursal:
+  - text: "En qué sucursal puedes visitarnos"
+  utter_ask_domicilio:
+  - text: "¿Cuál es tu domicilio?"
+  utter_ask_fecha:
+  - text: "¿Cuándo podría ser?"
+  utter_ask_hora:
+  - text: "¿A qué hora te gustaría que fuera?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
