@@ -50,6 +50,7 @@ class LavarForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         dispatcher.utter_message("Entendido. ¿Te gustaría que recolectemos tus prendas a domicilio o prefieres pasar a sucursal?")
+        return []
 
 class PlancharForm(FormAction):
     """ Pregunta la información sobre la ropa que se quiere planchar"""
@@ -71,7 +72,9 @@ class PlancharForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
+        
         dispatcher.utter_message("Entendido. ¿Te gustaría que recolectemos tus prendas a domicilio o prefieres pasar a sucursal?")
+        return []
 
 class ComponerForm(FormAction):
     """ Pregunta la información sobre la ropa que se quiere componer"""
@@ -94,6 +97,7 @@ class ComponerForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         dispatcher.utter_message("Entendido. ¿Te gustaría que recolectemos tu prenda a domicilio o prefieres pasar a sucursal?")
+        return []
 
 class DomicilioForm(FormAction):
     """ Pregunta la información sobre el domicilio y fecha hora para recolectar las prendas"""
@@ -117,6 +121,7 @@ class DomicilioForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         dispatcher.utter_message("Muy bien, te visitaremos en la fecha y hora acordada.")
+        return []
 
 class SucursalForm(FormAction):
     """ Pregunta la información sobre el domicilio y fecha hora para recolectar las prendas"""
@@ -140,6 +145,7 @@ class SucursalForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         dispatcher.utter_message("Muy bien, te esperamos en nuestra sucursal en la fecha y hora acordada.")
+        return []
 
 
 from rasa_sdk.events import UserUtteranceReverted
