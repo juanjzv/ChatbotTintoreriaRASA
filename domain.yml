@@ -8,16 +8,16 @@ intents:
   - componer
   - domicilio
   - sucursal
+  - informar_domicilio
 
 entities: 
   - tipo_prenda
   - tipo_lavado
-  - numero_prendas
   - tipo_compostura
   - domicilio
   - sucursal
-  - fecha
-  - hora
+  - time
+  - number
 
 slots:
   tipo_prenda:
@@ -54,7 +54,7 @@ slots:
       - reparar
   domicilio:
     type: unfeaturized
-  fecha:
+  fecha_hora:
     type: unfeaturized
   tipo_lavado:
     type: categorical
@@ -92,10 +92,8 @@ responses:
   - text: "En qué sucursal puedes visitarnos"
   utter_ask_domicilio:
   - text: "¿Cuál es tu domicilio?"
-  utter_ask_fecha:
+  utter_ask_fecha_hora:
   - text: "¿Cuándo podría ser?"
-  utter_ask_hora:
-  - text: "¿A qué hora te gustaría que fuera?"
 
 session_config:
   session_expiration_time: 60

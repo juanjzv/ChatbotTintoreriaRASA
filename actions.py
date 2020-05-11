@@ -51,7 +51,19 @@ class LavarForm(FormAction):
     ) -> List[Dict]:
         dispatcher.utter_message("Entendido. ¿Te gustaría que recolectemos tus prendas a domicilio o prefieres pasar a sucursal?")
         return []
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+        """A dictionary to map required slots to
+        - an extracted entity
+        - intent: value pairs
+        - a whole message
+        or a list of them, where a first match will be picked"""
+        return {
+            "numero_prendas": [
+                self.from_entity(entity="number"),
 
+            ]
+        }
 class PlancharForm(FormAction):
     """ Pregunta la información sobre la ropa que se quiere planchar"""
     
@@ -75,6 +87,20 @@ class PlancharForm(FormAction):
         
         dispatcher.utter_message("Entendido. ¿Te gustaría que recolectemos tus prendas a domicilio o prefieres pasar a sucursal?")
         return []
+        
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+        """A dictionary to map required slots to
+        - an extracted entity
+        - intent: value pairs
+        - a whole message
+        or a list of them, where a first match will be picked"""
+        return {
+            "numero_prendas": [
+                self.from_entity(entity="number"),
+
+            ]
+        }
 
 class ComponerForm(FormAction):
     """ Pregunta la información sobre la ropa que se quiere componer"""
@@ -110,8 +136,7 @@ class DomicilioForm(FormAction):
         """ La lista de espacios a llenar de domicilio_form"""
         return [
             "domicilio",
-            "fecha",
-            "hora"
+            "fecha_hora"
         ]
     
     def submit(
@@ -123,6 +148,20 @@ class DomicilioForm(FormAction):
         dispatcher.utter_message("Muy bien, te visitaremos en la fecha y hora acordada.")
         return []
 
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+        """A dictionary to map required slots to
+        - an extracted entity
+        - intent: value pairs
+        - a whole message
+        or a list of them, where a first match will be picked"""
+        return {
+            "fecha_hora": [
+                self.from_entity(entity="time"),
+
+            ]
+        }
+
 class SucursalForm(FormAction):
     """ Pregunta la información sobre el domicilio y fecha hora para recolectar las prendas"""
     
@@ -133,9 +172,8 @@ class SucursalForm(FormAction):
     def required_slots(tracker: Tracker) -> List[Text]:
         """ La lista de espacios a llenar de sucursal_form"""
         return [
-            "domicilio",
-            "fecha",
-            "hora"
+            "sucursal",
+            "fecha_hora"
         ]
     
     def submit(
@@ -146,6 +184,20 @@ class SucursalForm(FormAction):
     ) -> List[Dict]:
         dispatcher.utter_message("Muy bien, te esperamos en nuestra sucursal en la fecha y hora acordada.")
         return []
+        
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+        """A dictionary to map required slots to
+        - an extracted entity
+        - intent: value pairs
+        - a whole message
+        or a list of them, where a first match will be picked"""
+        return {
+            "fecha_hora": [
+                self.from_entity(entity="time"),
+
+            ]
+        }
 
 
 from rasa_sdk.events import UserUtteranceReverted

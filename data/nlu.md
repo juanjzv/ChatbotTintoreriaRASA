@@ -36,7 +36,7 @@
 ## intent:lavar
 - Quiero lavar
 - Lavar
-- Lavar [2](numero_prendas) [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
+- Lavar 2 [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
 - Necesito que me laven mi ropa
 - quiero que me laven mi ropa
 - Lavado
@@ -58,7 +58,7 @@
 - Lavar mi ropa en [seco](tipo_lavado)
 - Lavar mi ropa [normal](tipo_lavado)
 - Lavado [normal](tipo_lavado)
-- Haganme el favor de lavarme [tres](numero_prendas) [shorts](tipo_prenda)
+- Haganme el favor de lavarme 3 [shorts](tipo_prenda)
 - Necesito que me laven mi [camisa](tipo_prenda) en [seco](tipo_lavado)
 - Necesito que me laven mi [playera](tipo_prenda) [normal](tipo_lavado)
 - Quiero que me laven mi [traje](tipo_prenda) en [seco](tipo_lavado)
@@ -68,7 +68,7 @@
 ## intent:planchar
 - Quiero planchar
 - Planchar
-- Planchar [dos](numero_prendas) [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
+- Planchar dos [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
 - Necesito que me planchen mi ropa
 - quiero que me planchen mi ropa
 - Planchado
@@ -81,14 +81,14 @@
 - Mis [pantalones]{"entity": "tipo_prenda", "value": "pantalón"} están arrugados
 - Se arrugó mi [vestido](tipo_prenda)
 - Quiero que planchen mi [traje](tipo_prenda)
-- Mis [4](numero_prendas) [camisas]{"entity": "tipo_prenda", "value": "camisa"} están arrugadas
+- Mis 4 [camisas]{"entity": "tipo_prenda", "value": "camisa"} están arrugadas
 - Mi ropa está arrugada
 - Necesito planchar mi [chamarra](tipo_prenda)
 - Ayúdenme a planchar
 - Ayúdenme con el planchado de mi ropa
 - Plánchenme
 - planchenme
-- Haganme el favor de plancharme [tres](numero_prendas) [shorts]{"entity": "tipo_prenda", "value": "short"}
+- Haganme el favor de plancharme tres [shorts]{"entity": "tipo_prenda", "value": "short"}
 - Necesito que me planchen mi [camisa](tipo_prenda)
 - Quiero que me planchen mi [traje](tipo_prenda) 
 
@@ -130,17 +130,103 @@
 
 
 ## intent:informar
-- [dos](numero_prendas) [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
+- dos [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
 - [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
 - [vestido](tipo_prenda)
 - Mis [pantalones]{"entity": "tipo_prenda", "value": "pantalón"}
 - 2 [camisas]{"entity": "tipo_prenda", "value": "camisa"}
-- [1](numero_prendas) [pantalón](tipo_prenda)
+- 1 [pantalón](tipo_prenda)
 - Unas [camisas]{"entity": "tipo_prenda", "value": "camisa"}
 - [vestido](tipo_prenda)
 - [camisa]{"entity": "tipo_prenda", "value": "camisa"}
 - [seco](tipo_lavado)
 - lavado en [seco](tipo_lavado)
+
+## intent:domicilio
+- vengan ustedes
+- A domicilio
+- Recoger a domicilio
+- domicilio
+- vengan
+- No puedo ir
+- pueden venir
+- pueden venir?
+- por favor pasen
+- pasen
+- pasen ustedes
+- por favor vengan por la ropa
+- vengan por la ropa
+- ustedes
+- recójanla en mi casa
+- recojanla
+- recojanla en mi casa
+- pasen a recojerla
+- pasen por ella
+- pasen por él
+- pasen por el
+
+## intent:sucursal
+
+- yo la llevo
+- yo
+- sucursal
+- A sucursal
+- Entregar en sucursal
+- yo puedo ir
+- yo iré
+- yo voy
+- se las llevo
+- se los llevo
+- se lo llevo
+- se la llevo
+- lo llevo
+- la llevo
+- los llevo
+- las llevo
+- iré a la sucursal
+- ire a la sucursal
+- voy a la sucursal
+- se las entrego
+- se los entrego
+- se la entrego
+
+## intent:informar_domicilio
+- [av del peñon 201](domicilio)
+- Vivo en [av del peñon 201](domicilio)
+- En [av del peñon 201](domicilio)
+- pasen a [av del peñon 201](domicilio)
+- vengan a [av del peñon 201](domicilio)
+- recójanla en [av del peñon 201](domicilio)
+- recoger en [av del peñon 201](domicilio)
+- recojanla en [av del peñon 201](domicilio)
+- pasar a [av del peñon 201](domicilio)
+- ir a [av del peñon 201](domicilio)
+- vayan a [av del peñon 201](domicilio)
+- por favo en [av del peñon 201](domicilio)
+- [calzada de tlalpan 501](domicilio)
+- Vivo en [calzada de tlalpan 501](domicilio)
+- En [calzada de tlalpan 501](domicilio)
+- Pasen a  [calzada de tlalpan 501](domicilio)
+- Vengan a [calzada de tlalpan 501](domicilio)
+- Recójanla en [calzada de tlalpan 501](domicilio)
+- Recojanla en [calzada de tlalpan 501](domicilio)
+- pasar a [calzada de tlalpan 501](domicilio)
+- ir a [calzada de tlalpan 501](domicilio)
+- vayan a [calzada de tlalpan 501](domicilio)
+- por favor en [calzada de tlalpan 501](domicilio)
+- en esta dirección [calzada de tlalpan 501](domicilio)
+- en este lugar [calzada de tlalpan 501](domicilio)
+- Vivo en [Juliana 11 torre 34 depto 202](domicilio)
+- Mi casa esta en [unidad los tigres departamento 502](domicilio)
+
+## intent:informar_fecha_hora
+- El viernes a las 8
+- Mañana a las 9
+- El 30 de abril a las 7pm
+- Hoy a las 4
+- El próximo lunes a las 6
+- El proximo jueves a las 8 de la mañana
+- El sábado 8am
 
 
 ## synonym:camisa
@@ -222,6 +308,3 @@
 ## synonym:zacatenco
 - Zacatenco
 - La de zacatenco
-
-## regex:numero_prendas
-[0-9]{1,2}
