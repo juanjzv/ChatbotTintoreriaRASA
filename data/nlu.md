@@ -219,15 +219,6 @@
 - Vivo en [Juliana 11 torre 34 depto 202](domicilio)
 - Mi casa esta en [unidad los tigres departamento 502](domicilio)
 
-## intent:informar_fecha_hora
-- El viernes a las 8
-- Mañana a las 9
-- El 30 de abril a las 7pm
-- Hoy a las 4
-- El próximo lunes a las 6
-- El proximo jueves a las 8 de la mañana
-- El sábado 8am
-
 
 ## synonym:camisa
 - camisa
