@@ -1,0 +1,4 @@
+scipy==1.4.1
+gast==0.2.2
+rasa[spacy]
+rasa

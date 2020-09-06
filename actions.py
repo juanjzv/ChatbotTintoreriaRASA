@@ -30,10 +30,10 @@ from rasa_sdk.forms import FormAction
 
 class LavarForm(FormAction):
     """ Pregunta la información sobre la ropa que se quiere lavar"""
-    
+
     def name(self) -> Text:
         return "lavar_form"
-    
+
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """ La lista de espacios a llenar de lavar_form"""
@@ -42,7 +42,7 @@ class LavarForm(FormAction):
             "numero_prendas",
             "tipo_lavado"
         ]
-    
+
     def submit(
         self,
         dispatcher: CollectingDispatcher,
@@ -66,10 +66,10 @@ class LavarForm(FormAction):
         }
 class PlancharForm(FormAction):
     """ Pregunta la información sobre la ropa que se quiere planchar"""
-    
+
     def name(self) -> Text:
         return "planchar_form"
-    
+
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """ La lista de espacios a llenar de planchar_form"""
@@ -77,17 +77,17 @@ class PlancharForm(FormAction):
             "tipo_prenda",
             "numero_prendas",
         ]
-    
+
     def submit(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
-        
+
         dispatcher.utter_message("Entendido. ¿Te gustaría que recolectemos tus prendas a domicilio o prefieres pasar a sucursal?")
         return []
-        
+
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
         """A dictionary to map required slots to
@@ -104,10 +104,10 @@ class PlancharForm(FormAction):
 
 class ComponerForm(FormAction):
     """ Pregunta la información sobre la ropa que se quiere componer"""
-    
+
     def name(self) -> Text:
         return "componer_form"
-    
+
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """ La lista de espacios a llenar de componer_form"""
@@ -115,7 +115,7 @@ class ComponerForm(FormAction):
             "tipo_prenda",
             "tipo_compostura"
         ]
-    
+
     def submit(
         self,
         dispatcher: CollectingDispatcher,
@@ -127,10 +127,10 @@ class ComponerForm(FormAction):
 
 class DomicilioForm(FormAction):
     """ Pregunta la información sobre el domicilio y fecha hora para recolectar las prendas"""
-    
+
     def name(self) -> Text:
         return "domicilio_form"
-    
+
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """ La lista de espacios a llenar de domicilio_form"""
@@ -138,7 +138,7 @@ class DomicilioForm(FormAction):
             "domicilio",
             "fecha_hora"
         ]
-    
+
     def submit(
         self,
         dispatcher: CollectingDispatcher,
@@ -164,10 +164,10 @@ class DomicilioForm(FormAction):
 
 class SucursalForm(FormAction):
     """ Pregunta la información sobre el domicilio y fecha hora para recolectar las prendas"""
-    
+
     def name(self) -> Text:
         return "sucursal_form"
-    
+
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """ La lista de espacios a llenar de sucursal_form"""
@@ -175,7 +175,7 @@ class SucursalForm(FormAction):
             "sucursal",
             "fecha_hora"
         ]
-    
+
     def submit(
         self,
         dispatcher: CollectingDispatcher,
@@ -184,7 +184,7 @@ class SucursalForm(FormAction):
     ) -> List[Dict]:
         dispatcher.utter_message("Muy bien, te esperamos en nuestra sucursal en la fecha y hora acordada.")
         return []
-        
+
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
         """A dictionary to map required slots to
@@ -206,7 +206,7 @@ class ActionSaludarUsuario(Action):
 
     def name(self) -> Text:
         return "action_saludar"
-    
+
     def run(
         self,
         dispatcher,
@@ -221,7 +221,7 @@ class ActionBotChallenge(Action):
 
     def name(self) -> Text:
         return "action_bot"
-    
+
     def run(
         self,
         dispatcher,

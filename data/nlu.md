@@ -90,7 +90,7 @@
 - planchenme
 - Haganme el favor de plancharme tres [shorts]{"entity": "tipo_prenda", "value": "short"}
 - Necesito que me planchen mi [camisa](tipo_prenda)
-- Quiero que me planchen mi [traje](tipo_prenda) 
+- Quiero que me planchen mi [traje](tipo_prenda)
 
 ## intent:componer
 - compostura
@@ -124,8 +124,8 @@
 - [parchen]{"entity": "tipo_compostura", "value": "reparar"}
 - Arréglenme
 - Haganme el favor de [ampliar](tipo_compostura) mi [short]{"entity": "tipo_prenda", "value": "short"}
-- Necesito que me [reduzcan]{"entity": "tipo_compostura", "value": "reducir"} mi [camisa]{"entity": "tipo_prenda", "value": "camisa"} 
-- Quiero que me arreglen mi [traje](tipo_prenda) 
+- Necesito que me [reduzcan]{"entity": "tipo_compostura", "value": "reducir"} mi [camisa]{"entity": "tipo_prenda", "value": "camisa"}
+- Quiero que me arreglen mi [traje](tipo_prenda)
 
 
 
@@ -259,6 +259,7 @@
 - pantalón corto
 - pantalon corto
 - pantalones cortos
+- bermudas
 
 ## synonym:suéter
 - suéter
